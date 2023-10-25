@@ -28,7 +28,7 @@ jobs:
         cache: 'yarn'
     - run: yarn install
     - run: yarn test --if-present
-    - run: yarn build
+    - run: yarn build:prod
     - name: Deploy to GH Pages 🚀
       uses: peaceiris/actions-gh-pages@v3
       with:

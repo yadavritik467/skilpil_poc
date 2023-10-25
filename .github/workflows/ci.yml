@@ -29,8 +29,14 @@ jobs:
         run: yarn install
       - name: Building the dist file
         run: yarn build:prod
-      - name: Deploy to GH Pages 
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Deploy to GH Pages
+        uses: s0/git-publish-subdir-action@develop
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: dist/my-angular-app
+        env:
+          REPO: self
+          BRANCH: gh-pages
+          FOLDER: dist/my-angular-app
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MESSAGE: "Build: ({sha}) {msg}"

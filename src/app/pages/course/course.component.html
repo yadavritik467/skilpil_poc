@@ -1,1 +1,21 @@
-<p>course works!</p>
+<div class="body-course w-full text-center mt-32 mb-20 ">
+    <h1 class="text-3xl font-bold  ">Explore Our Courses</h1>
+    <span class="text-xl">The future belongs to those who learn more skills and combine them in creative ways.</span>
+
+    <div id="course" class="course-container flex flex-wrap   justify-between">
+        <div *ngFor="let course of courses" class="flex flex-col mt-10 mx-auto  w-[20rem]">
+
+
+            <a routerLink="{{course.id}}" class="flex flex-col items-start  "> <img class="rounded-2xl" [src]="course.image" alt="">
+                
+
+                <p class="font-bold m-2">{{ course.title }}</p>
+                <span class="m-2">{{ course.duration }}</span>
+                <button class="custom-bg-color text-white w-36 font-bold m-2 py-2 px-4 ">
+                    Contact Now
+                </button>
+            </a>
+
+        </div>
+    </div>
+</div>

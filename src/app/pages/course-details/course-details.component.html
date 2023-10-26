@@ -1,1 +1,15 @@
-<p>course-details works!</p>
+<div id="course" class="course-container flex flex-wrap  py-20  justify-between">
+    <div  class="flex flex-wrap justify-around gap-20 mt-20 mx-auto  ">
+      <div class="px-10">
+        <img class="rounded-2xl w-[500px]" [src]="course.image" alt="">
+      </div>
+      <div class=" flex flex-col items-center justify-center  ">
+       
+        <p class="font-bold m-2">{{ course.title }}</p>
+        <span class="m-2">{{ course.duration }}</span>
+        <button class="custom-bg-color text-white w-36 font-bold m-2 py-2 px-4 ">
+            Contact Now
+        </button>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+<!-- for header -->
+
+<div [ngClass]="{'sticky': isSticky}" class="header max-md:hidden fixed top-0  w-full flex justify-between items-center px-20 ">
+    <div class="img">
+        <img src="https://www.skilpil.com/images/logo.png" class="w-[100px]" alt="">
+    </div>
+    <div class="header-container flex justify-between items-center">
+        <a class="mx-4 text-black font-bold" routerLink="">Home</a>
+        <a class="mx-4 text-black font-bold" routerLink="about" >About Us</a>
+        <a class="mx-4 text-black font-bold" routerLink="course">Courses</a>
+        <a class="mx-4 text-black font-bold" routerLink="contact">Contact</a>
+        <a class="mx-4 text-black font-bold" routerLink="">Back To Exampil</a>
+        <button class="custom-bg-color text-white font-bold py-2 px-4 ">
+            99930552237
+        </button>
+
+    </div>
+</div>
+
+<!-- for responsive header -->
+<div  class="header hidden sticky  w-full max-md:block justify-between items-center px-10 ">
+    <div class="img flex justify-between w-full items-center ">
+        <img src="https://www.skilpil.com/images/logo.png" class="w-[100px]" alt="">
+        <i (click)="toggleClassName()" class="fa-solid fa-bars" style="color: #000000;"></i>
+    </div>
+    <div [class]="className" class="header-container  flex-col justify-between  gap-10 py-10 items-center">
+        <a class="mx-4 text-black font-bold" routerLink="">Home</a>
+        <a class="mx-4 text-black font-bold" routerLink="about">About Us</a>
+        <a class="mx-4 text-black font-bold" routerLink="course">Courses</a>
+        <a class="mx-4 text-black font-bold" routerLink="contact">Contact</a>
+        <a class="mx-4 text-black font-bold" routerLink="">Back To Exampil</a>
+        <button class="custom-bg-color text-white font-bold py-2 px-4 ">
+            99930552237
+        </button>
+
+    </div>
+</div>

@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@fortawesome/fontawesome-free/css/all.css";
+@import "../src/assets/scss/variables";
 
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
@@ -8,7 +9,116 @@
 *{
     margin: 0;
     padding: 0;
-    scroll-behavior: smooth;
 }
 
+
+@mixin backgroundImg ($url,$repeat,$position,$size,$width,$height){
+    background-image: url($url)  ;
+    background-repeat: $repeat;
+    background-position: $position;
+    background-size: $size;
+    width: $width;
+    height: $height;
+}
+
+.header{
+    transition: background-color 0.3s ease;
+}
+
+.header.sticky{
+    position: fixed;
+    top: 0;
+    z-index: 11;
+    background-color: white;
+}
+
+.custom-bg-color {
+    background-color: $primary_color;
+    border: 2px solid $primary_color;
+    transition: all 0.3s;
+}
+
+.custom-bg-color:hover {
+    background-color: transparent;
+    color: $primary_color;
+}
+
+.header-bottom-body{
+    @include backgroundImg("https://cdn.pixabay.com/photo/2017/07/27/17/09/view-2546021_640.png",no-repeat ,center , cover,100% ,700px );
+}
+
+
+.course-container{
+    & span{
+        color: $text_color;
+    }
+}
+
+.counter-container{
+    background-color: $secondary_color;
+    margin-top: 7rem;
+}
+
+.about-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: fit-content;
+
+}
+
+.heading {
+    & h2{
+        color: $heading_color;
+        font-size: 2.5rem;
+        line-height: 1.4;
+        font-weight: 400;
+    }
+    & p {
+       color: $text_color;
+    }
+}
+
+
+.contact-page{
+    @include backgroundImg("https://www.skilpil.com/images/bg/bg-2.jpg",no-repeat ,center , cover,100% ,fit-content )
+}
+
+.circle{
+    display:  flex;
+    justify-content: space-around;
+    width: 100px;
+    & div{
+        width: 20px;
+        height: 20px;
+        background-color: rgb(229, 130, 146);
+        border-radius: 100%;
+        opacity: 0.5;
+    }
+}
+
+
+.input-handler{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    gap: 10px;
+    // border: 2px solid $secondary_color;
+    padding: 0;
+}
+
+.input-handler > input{
+    border: 2px solid $secondary_color;
+    width: 300px;
+    height: 40px;
+    text-align: center;
+}
+
+.background-attachment{
+    @include backgroundImg("https://www.skilpil.com/images/bg/bg-3.jpg",no-repeat ,center , cover,100% ,fit-content );
+     background-attachment: fixed;
+}
 

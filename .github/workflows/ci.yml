@@ -9,7 +9,8 @@ jobs:
   deploy:
     permissions:
       contents: write
+    if: github.event.repository.name === 'skilpil_poc'
     uses: shiv-source/workflows/.github/workflows/angular-pnpm-gh-pages.yml@master
     with:
       ANGULAR_BUILD_DIR: ./dist/my-angular-app/
-      ANGULAR_BUILD_COMMAND: pnpm build:prod 
+      ANGULAR_BUILD_COMMAND: pnpm build:prod

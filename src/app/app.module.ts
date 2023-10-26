@@ -6,11 +6,25 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HomeComponent } from './pages/home/home.component';
+import { AboutComponent } from './pages/about/about.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { FooterComponent } from './layouts/footer/footer.component';
+import { PageNotFoundComponent } from './layouts/page-not-found/page-not-found.component';
+import { CourseComponent } from './pages/course/course.component';
+import { CourseDetailsComponent } from './pages/course-details/course-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    HomeComponent,
+    AboutComponent,
+    ContactComponent,
+    FooterComponent,
+    PageNotFoundComponent,
+    CourseComponent,
+    CourseDetailsComponent
   ],
   imports: [
     BrowserModule,

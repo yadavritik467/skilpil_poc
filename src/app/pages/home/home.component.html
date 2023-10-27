@@ -1,4 +1,3 @@
-
 <div [@fadeInAnimation] id="home" class="header-bottom-body flex flex-col ">
     <div class="container-title mt-48 mx-6 md:mx-20  ">
         <h1 class="w-[13rem] text-white  font-bold text-5xl">Bringing Industry closer to Institutions.</h1> <br>
@@ -9,4 +8,18 @@
         </button>
     </div>
 
+</div>
+
+<div class="w-[100%] overflow-hidden mt-20">
+    <h1 class="text-4xl text-[#555] text-center my-10">All New Trending Courses</h1>
+    <owl-carousel-o [options]="customOptions">
+
+        <ng-container class="mx-10" *ngFor="let banner of banners">
+            <ng-template carouselSlide [id]="banner.priorityId">
+                <img class=" w-[600px] mx-20  h-[500px]" [src]="banner.bannerUrl">
+                <p class="text-center text-2xl">{{banner.title}}</p>
+                <p class="text-center text-2xl">{{banner.description}}</p>
+            </ng-template>
+        </ng-container>
+    </owl-carousel-o>
 </div>

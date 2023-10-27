@@ -1,0 +1,51 @@
+export const bannerSchema = [
+    {
+        priorityId: 2,
+        title: 'pythoneCourse',
+        bannerUrl: '../../assets/images/banners/1.jpg',
+        description: 'python best',
+        isPublic:true,
+    },
+    {
+        priorityId: 3,
+        title: 'c++ Course',
+        bannerUrl: '../../assets/images/banners/2.jpg',
+        description: 'c++ best',
+        isPublic:true,
+    },
+    {
+        priorityId: 1,
+        title: 'java Course',
+        bannerUrl: '../../assets/images/banners/3.jpg',
+        description: 'java best',
+        isPublic:false,
+    },
+    {
+        priorityId: 4,
+        title: ' Mern Course',
+        bannerUrl: '../../assets/images/banners/4.png',
+        description: 'Mern best',
+        isPublic:true,
+    },
+    {
+        priorityId: 5,
+        title: ' Node Course',
+        bannerUrl: '../../assets/images/banners/5.png',
+        description: 'Node best',
+        isPublic:true,
+    },
+    {
+        priorityId: 6,
+        title: ' Typescript Course',
+        bannerUrl: '../../assets/images/banners/6.jpg',
+        description: 'Typescript best',
+        isPublic:true,
+    },
+    {
+        priorityId: 7,
+        title: ' Javascript Course',
+        bannerUrl: '../../assets/images/banners/7.png',
+        description: 'Javascript best',
+        isPublic:true,
+    },
+];

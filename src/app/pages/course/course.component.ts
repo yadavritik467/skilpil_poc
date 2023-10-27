@@ -7,5 +7,7 @@ import { coursesSchema } from 'src/app/schema/course.schema';
   styleUrls: ['./course.component.scss']
 })
 export class CourseComponent {
-  courses: any[] = coursesSchema;
+
+  courses : any[]=coursesSchema;
+
 }

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { bannerSchema } from 'src/app/schema/homebanner.schema';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { customerSchema } from 'src/app/schema/customer.schema';
 
 
 @Component({
@@ -12,6 +13,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 export class HomeComponent {
  
   banners:any[] = bannerSchema;
+  customers:any[] = customerSchema;
   customOptions: any = {
     loop: true,
     mouseDrag: true,

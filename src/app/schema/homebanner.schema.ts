@@ -1,7 +1,28 @@
+export const mainBannerSchema = [
+    {
+        id:1,
+        bannerUrl:"https://cdn.pixabay.com/photo/2017/07/27/17/09/view-2546021_640.png",
+        quote:"Bringing Industry closer to  Institutions.",
+        title:"Mastering the skill,with India's best Industry Experts."
+    },
+    {
+        id:2,
+        bannerUrl:"https://cdn.pixabay.com/photo/2013/10/05/17/03/rail-road-191097_640.jpg",
+        quote:"Life is a journey that must be traveled no matter how bad the roads and accommodations.",
+        title:"Embrace the glorious mess that you are."
+    },
+    {
+        id:3,
+        bannerUrl:"https://cdn.pixabay.com/photo/2018/01/15/21/38/nature-3084841_1280.jpg",
+        quote:"Your time is limited, don't waste it living someone else's life.",
+        title:"The best way to predict the future is to invent it."
+    },
+]
+
 export const bannerSchema = [
     {
         priorityId: 2,
-        title: 'pythoneCourse',
+        title: 'pythone Course',
         bannerUrl: '../../assets/images/banners/1.jpg',
         description: `Unlock Your Potential with Python Mastery!
 
@@ -12,7 +33,7 @@ export const bannerSchema = [
     },
     {
         priorityId: 3,
-        title: 'c++ Course',
+        title: 'C++ Course',
         bannerUrl: '../../assets/images/banners/2.jpg',
         description: `Unlock Your Potential with c++ Mastery!
 
@@ -83,7 +104,7 @@ export const bannerSchema = [
 export const bannerSchema_1 = [
     {
         priorityId: 2,
-        title: 'pythoneCourse',
+        title: 'pythone Course',
         bannerUrl: '../../assets/images/banners/1.jpg',
         description: `Unlock Your Potential with Python Mastery!
 
@@ -94,7 +115,7 @@ export const bannerSchema_1 = [
     },
     {
         priorityId: 3,
-        title: 'c++ Course',
+        title: 'C++ Course',
         bannerUrl: '../../assets/images/banners/2.jpg',
         description: `Unlock Your Potential with c++ Mastery!
 

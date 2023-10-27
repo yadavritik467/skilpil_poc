@@ -24,6 +24,27 @@
     height: $height;
 }
 
+// for carousel
+.left, .right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgb(47, 47, 53) !important; 
+    color: white; 
+    padding: 10px 15px !important; 
+    border-radius: 50% !important; 
+  }
+  
+  .left {
+    left: 50px;
+    font-size: 1rem !important; 
+  }
+  
+  .right {
+    right: 50px;
+    font-size: 1rem !important;  
+  }
+
 .header{
     transition: background-color 0.3s ease;
 }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { bannerSchema } from 'src/app/schema/homebanner.schema';
+import { bannerSchema, bannerSchema_1 } from 'src/app/schema/homebanner.schema';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { customerSchema } from 'src/app/schema/customer.schema';
 
@@ -13,6 +13,7 @@ import { customerSchema } from 'src/app/schema/customer.schema';
 export class HomeComponent {
  
   banners:any[] = bannerSchema;
+  banners_1:any[] = bannerSchema_1;
   customers:any[] = customerSchema;
   customOptions: any = {
     loop: true,

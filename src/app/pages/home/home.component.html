@@ -1,9 +1,11 @@
 <div [@fadeInAnimation] id="home" class="header-bottom-body flex flex-col ">
-    <div class="container-title mt-48 mx-6 md:mx-20  ">
-        <h1 class="w-[13rem] text-white  font-bold text-5xl">Bringing Industry closer to Institutions.</h1> <br>
-        <span class=" text-white  mt-40  text-sm">Mastering the skill,with India's best Industry Experts.</span> <br>
+    <div class="container-title mt-48 mx-6 flex flex-col justify-center items-center text-center  ">
+        <h1 class="md:w-[40%]   text-white italic font-bold text-5xl">Bringing Industry closer to <br> Institutions.
+        </h1> <br>
+        <span class=" text-white  mt-10  italic   text-xl">Mastering the skill,with India's best Industry
+            Experts.</span> <br>
         <br>
-        <button class="custom-bg-color text-white font-bold py-2 px-4 ">
+        <button class="custom-bg-color md:w-[35%]  text-white font-bold py-2 px-4 ">
             Call Us Now
         </button>
     </div>
@@ -16,22 +18,39 @@
 
         <ng-container class="text-center" *ngFor="let banner of banners">
             <ng-template carouselSlide [id]="banner.priorityId">
-                <img class=" px-10 w-[600px] m-20  h-[400px]" [src]="banner.bannerUrl">
-                <p class="text-center text-2xl">{{banner.title}}</p>
-                <p class="text-center text-2xl">{{banner.description}}</p>
+                <div class="px-10 cursor-pointer  text-center flex flex-col items-center justify-center"
+                    (mouseover)="banner.showDescription = true" (mouseout)="banner.showDescription = false"
+                    (click)="banner.showDescription = !banner.showDescription">
+
+                    <img class="w-[300px] m-20 h-[200px]" [src]="banner.bannerUrl">
+                    <p class="text-center text-[#555] text-2xl">{{banner.title}}</p>
+
+                    <p *ngIf="banner.showDescription"
+                        class="text-center flex flex-col justify-center text-[#555] fixed top-10 border border-green-400 w-[250px] h-fit bg-white p-4 text-sm">
+                        {{banner.description}}</p>
+                </div>
             </ng-template>
         </ng-container>
     </owl-carousel-o>
 </div>
 <div class="w-[100%] overflow-hidden mt-20">
-    <h1 class="text-4xl text-[#555] text-center my-10">Most liked by people</h1>
+    <h1 class="text-4xl text-[#555]  text-center my-10">Most liked by people</h1>
     <owl-carousel-o [options]="customOptions">
 
-        <ng-container class="text-center" *ngFor="let banner of banners">
+        <ng-container class="text-center" *ngFor="let banner of banners_1">
             <ng-template carouselSlide [id]="banner.priorityId">
-                <img class=" px-10 w-[600px] m-20  h-[400px]" [src]="banner.bannerUrl">
-                <p class="text-center text-2xl">{{banner.title}}</p>
-                <p class="text-center text-2xl">{{banner.description}}</p>
+                <div class="px-10 cursor-pointer  text-center flex flex-col items-center justify-center"
+                    (mouseover)="banner.showDescription = true" (mouseout)="banner.showDescription = false"
+                    (click)="banner.showDescription = !banner.showDescription">
+
+                    <img class="w-[300px] m-20 h-[200px]" [src]="banner.bannerUrl">
+                    <p class="text-center text-[#555] text-2xl">{{banner.title}}</p>
+
+                    <p *ngIf="banner.showDescription"
+                        class="text-center flex flex-col justify-center text-[#555] fixed top-10 border border-green-400 w-[250px] h-fit bg-white p-4 text-sm">
+                        {{banner.description}}</p>
+                </div>
+
             </ng-template>
         </ng-container>
     </owl-carousel-o>
@@ -41,12 +60,12 @@
     <owl-carousel-o [options]="customOptions">
 
         <ng-container class="text-center" *ngFor="let customer of customers">
-            <ng-template  carouselSlide [id]="customer.id">
-               <div class="px-10  text-center flex flex-col items-center justify-center">
-                <img class="  w-[300px] m-20  h-[200px]" [src]="customer.customerUrl">
-                <p class="text-center mx-auto my-10 text-2xl">Name :{{customer.name}}</p>
-                <p class="text-center text-[#555] text-sm"> Review : {{customer.review}}</p>
-               </div>
+            <ng-template carouselSlide [id]="customer.id">
+                <div class="px-10  text-center flex flex-col items-center justify-center">
+                    <img class="  w-[300px] m-20  h-[200px]" [src]="customer.customerUrl">
+                    <p class="text-center mx-auto my-10 text-2xl">Name :{{customer.name}}</p>
+                    <p class="text-center text-[#555] text-sm"> Review : {{customer.review}}</p>
+                </div>
             </ng-template>
         </ng-container>
     </owl-carousel-o>

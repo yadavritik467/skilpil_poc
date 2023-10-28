@@ -24,12 +24,22 @@
     height: $height;
 }
 
+.caro{
+    box-shadow:  12px 14px 6px 2px #dfdfdf;
+    border-radius: 10px;
+
+    img{
+       border-top-left-radius: 10px;
+       border-top-right-radius: 10px;
+    }
+}
+
 // for carousel
 .left, .right {
     position: absolute;
-    top: 50%;
+    top: 45%;
     transform: translateY(-50%);
-    background-color: rgb(47, 47, 53) !important; 
+    background-color: $primary_color !important; 
     color: white; 
     padding: 10px 15px !important; 
     border-radius: 50% !important; 

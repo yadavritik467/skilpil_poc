@@ -31,10 +31,10 @@ export class HomeComponent {
         items: 1
       },
       400: {
-        items: 2
+        items: 1
       },
       740: {
-        items: 3
+        items: 1
       },
       940: {
         items: 1
@@ -51,16 +51,16 @@ export class HomeComponent {
     pullDrag: true,
     dots: false,
     navSpeed: 700,
-    navText: ['<', '>'],
+    navText: [ '<i class="left"> < </i>', '<i class="right"> > </i>' ],
     responsive: {
       0: {
         items: 1
       },
       400: {
-        items: 2
+        items: 1
       },
       740: {
-        items: 3
+        items: 2
       },
       940: {
         items: 4

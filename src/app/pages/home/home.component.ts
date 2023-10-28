@@ -25,7 +25,7 @@ export class HomeComponent {
     pullDrag: true,
     dots: false,
     navSpeed: 700,
-    navText: [ '<i class="left"> < </i>', '<i class="right"> > </i>' ],
+    navText: [ '<p class="left" > < </p>', '<p class="right"> > </p>' ],
     responsive: {
       0: {
         items: 1
@@ -51,7 +51,7 @@ export class HomeComponent {
     pullDrag: true,
     dots: false,
     navSpeed: 700,
-    navText: [ '<i class="left"> < </i>', '<i class="right"> > </i>' ],
+    navText: [ '<p class="left" > < </p>', '<p class="right"> > </p>' ],
     responsive: {
       0: {
         items: 1

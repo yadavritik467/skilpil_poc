@@ -43,7 +43,7 @@ export const customerSchema: any[] = [
     },
     {
         id:8,
-        customerUrl: 'assets/images/customer/3.jpg',
+        customerUrl: 'assets/images/customer/1.jpg',
         name: 'Noah Thompson',
         review: "I recently enrolled in a Ethical hacking course from Skill Pill, and I am thoroughly impressed with the comprehensive content and engaging teaching methods. The course material is well-structured, and the instructors are incredibly knowledgeable. Skill Pill's user-friendly platform made my learning experience seamless, and the interactive approach helped me grasp complex concepts easily. I highly recommend Skill Pill to anyone seeking quality education and a supportive learning environment."
     },
@@ -55,7 +55,7 @@ export const customerSchema: any[] = [
     },
     {
         id:10,
-        customerUrl: 'assets/images/customer/1.jpg',
+        customerUrl: 'assets/images/customer/3.jpg',
         name: 'Sophia Martin',
         review: "I recently enrolled in a software developement course from Skill Pill, and I am thoroughly impressed with the comprehensive content and engaging teaching methods. The course material is well-structured, and the instructors are incredibly knowledgeable. Skill Pill's user-friendly platform made my learning experience seamless, and the interactive approach helped me grasp complex concepts easily. I highly recommend Skill Pill to anyone seeking quality education and a supportive learning environment."
     },

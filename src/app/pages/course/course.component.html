@@ -2,20 +2,34 @@
     <h1 class="text-3xl font-bold  ">Explore Our Courses</h1>
     <span class="text-xl">The future belongs to those who learn more skills and combine them in creative ways.</span>
 
-    <div id="course" class="course-container flex flex-wrap   justify-between">
-        <div *ngFor="let course of courses" class="flex flex-col mt-10 mx-auto  w-[20rem]">
+    <div id="course" class="course-container flex max-md:flex-wrap">
+        <div class="flex just gap-2 mx-10 max-sm:my-5 ">
+            <p class="border border-black h-20 p-4 " ><span class="font-black">Filter</span></p>
+            <p class="border border-black h-20 p-4 text-left"><span class="font-black text-sm">Sort by</span> <br> 
+            <select name="" id="">
 
-
-            <a routerLink="{{course.id}}" class="flex flex-col items-start  "> <img class="rounded-2xl" [src]="course.image" alt="">
-                
-
-                <p class="font-bold m-2">{{ course.title }}</p>
-                <span class="m-2">{{ course.duration }}</span>
-                <button class="custom-bg-color text-white w-36 font-bold m-2 py-2 px-4 ">
-                    Contact Now
-                </button>
-            </a>
-
+                <option value="">Most Relevant</option>
+                <option value="">Most Reviewed</option>
+                <option value="">Newest</option>
+            </select> </p>
         </div>
+        
+            <div class="  flex flex-wrap justify-around mt-10   w-fit" >
+                <div *ngFor="let course of courses" class="w-[320px] max-sm:w-[280px] max-sm:my-5 " >
+
+
+                    <a routerLink="{{course.id}}" class="flex flex-col items-start  "> <img class="rounded-2xl" [src]="course.image" alt="">
+                        
+        
+                        <p class="font-bold m-2">{{ course.title }}</p>
+                        <span class="m-2">{{ course.duration }}</span>
+                        <button class="custom-bg-color text-white w-36 font-bold m-2 py-2 px-4 ">
+                            Contact Now
+                        </button>
+                    </a>
+        
+                </div>
+            </div>
+        
     </div>
 </div>

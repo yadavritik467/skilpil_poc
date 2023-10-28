@@ -32,7 +32,7 @@
                     (mouseover)="banner.showDescription = true" (mouseout)="banner.showDescription = false"
                     (click)="banner.showDescription = !banner.showDescription">
                     <div class=" flex flex-col justify-center items-center">
-                        <img class="w-[300px]  h-[350px]" [src]="banner.bannerUrl">
+                        <img class="w-[300px]  h-[350px]" [src]=" this.utilsService.getUrl(banner.bannerUrl)">
                         <p *ngIf="banner.showDescription"
                             class="text-center shadow-lg shadow-indigo-500/40 flex flex-col justify-center text-[#555] fixed  border border-green-400 w-[250px] h-fit bg-white p-4 text-sm">
                             {{banner.description}}</p>
@@ -56,7 +56,7 @@
                     (click)="banner.showDescription = !banner.showDescription">
 
                     <div class=" flex flex-col justify-center items-center">
-                        <img class="w-[300px]  h-[350px]" [src]="banner.bannerUrl">
+                        <img class="w-[300px]  h-[350px]" [src]="this.utilsService.getUrl(banner.bannerUrl)">
 
 
                         <p *ngIf="banner.showDescription"
@@ -79,7 +79,7 @@
         <ng-container class="text-center" *ngFor="let customer of customers">
             <ng-template carouselSlide [id]="customer.id">
                 <div class="px-10  text-center flex flex-col items-center justify-center">
-                    <img class="  w-[300px] m-20  h-[200px]" [src]="customer.customerUrl">
+                    <img class="  w-[300px] m-20  h-[200px]" [src]="this.utilsService.getUrl(customer.customerUrl)">
                     <p class="text-center mx-auto my-10 text-2xl">Name : {{customer.name}}</p>
                     <p class="text-center text-[#555] text-sm"> Review : {{customer.review}}</p>
                 </div>

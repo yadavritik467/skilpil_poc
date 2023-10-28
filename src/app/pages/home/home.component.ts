@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { bannerSchema, bannerSchema_1, mainBannerSchema } from 'src/app/schema/homebanner.schema';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { customerSchema } from 'src/app/schema/customer.schema';
+import { UtilsService } from '../../services/utils.service';
 
 
 @Component({
@@ -67,4 +68,6 @@ export class HomeComponent {
     },
     nav: true
   }
+
+  constructor( public readonly utilsService:UtilsService) {}
 }

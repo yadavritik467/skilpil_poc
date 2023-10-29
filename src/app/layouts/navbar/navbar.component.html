@@ -1,14 +1,15 @@
 <!-- for header -->
 
 <div [ngClass]="{'sticky': isSticky}"
-    class="header max-lg:hidden fixed top-0  w-full flex justify-between items-center px-10 ">
+    class="header max-lg:hidden fixed top-0  w-full flex justify- items-center px-10 ">
     <div class="img  w-fit flex  items-cente ">
         <img src="https://www.skilpil.com/images/logo.png" class="w-[100px]" alt="">
     </div>
-    <div class="flex  justify-between items-center mx-auto"> <input class="pl-5 border outline-none h-[43px] " type="text"
-            placeholder="search for anything . ."> <button
-            class="custom-bg-color  text-white p-2 tracking-widest">Search</button> </div>
-    <div class="header-container flex justify-between items-center ml-auto">
+    <div class="flex  justify-between items-center ml-10 ">
+        <input class="pl-5 border border-slate-400 outline-none w-[500px] h-[43px]  " type="text" placeholder="search for anything . .">
+        <button class="custom-bg-color  text-white p-2 ">Search</button>
+    </div>
+    <div class="header-container flex justify-between items-center ml-auto ">
         <a class="mx-4 text-black font-bold" routerLink="">Home</a>
         <a class="mx-4 text-black font-bold" routerLink="course">Courses</a>
         <a class="mx-4 text-black font-bold" routerLink="contact">Contact</a>

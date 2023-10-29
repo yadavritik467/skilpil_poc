@@ -29,15 +29,15 @@ dependencies:
   '@angular/router':
     specifier: ^16.2.0
     version: 16.2.11(@angular/common@16.2.11)(@angular/core@16.2.11)(@angular/platform-browser@16.2.11)(rxjs@7.8.1)
+  '@clr/angular':
+    specifier: ^16.0.2
+    version: 16.0.2(@angular/cdk@16.2.10)(@angular/common@16.2.11)(@angular/core@16.2.11)(@cds/core@6.7.0)(@clr/ui@16.0.2)
   '@fortawesome/fontawesome-free':
     specifier: ^6.4.2
     version: 6.4.2
   ng-animate:
     specifier: ^2.0.1
     version: 2.0.1(@angular/animations@16.2.11)(@angular/common@16.2.11)(@angular/core@16.2.11)
-  ng-zorro-antd:
-    specifier: ^16.2.2
-    version: 16.2.2(@angular/animations@16.2.11)(@angular/common@16.2.11)(@angular/core@16.2.11)(@angular/forms@16.2.11)(@angular/platform-browser@16.2.11)(@angular/router@16.2.11)(rxjs@7.8.1)
   ngx-owl-carousel-o:
     specifier: ^16.0.0
     version: 16.0.0(@angular/common@16.2.11)(@angular/core@16.2.11)(rxjs@7.8.1)
@@ -459,28 +459,6 @@ packages:
       '@angular/common': 16.2.11(@angular/core@16.2.11)(rxjs@7.8.1)
       '@angular/core': 16.2.11(rxjs@7.8.1)(zone.js@0.13.3)
       '@angular/platform-browser': 16.2.11(@angular/animations@16.2.11)(@angular/common@16.2.11)(@angular/core@16.2.11)
-      rxjs: 7.8.1
-      tslib: 2.6.2
-    dev: false
-
-  /@ant-design/colors@7.0.0:
-    resolution: {integrity: sha512-iVm/9PfGCbC0dSMBrz7oiEXZaaGH7ceU40OJEfKmyuzR9R5CRimJYPlRiFtMQGQcbNMea/ePcoIebi4ASGYXtg==}
-    dependencies:
-      '@ctrl/tinycolor': 3.6.1
-    dev: false
-
-  /@ant-design/icons-angular@16.0.0(@angular/common@16.2.11)(@angular/core@16.2.11)(@angular/platform-browser@16.2.11)(rxjs@7.8.1):
-    resolution: {integrity: sha512-KWBmWZl2so49R/MdAT7aG+xaBlMKl9SArR3Du/iPA0Am9GI1i9R89KgnnLWz+gkzHTye15S1IBXpgts4GPPU/w==}
-    peerDependencies:
-      '@angular/common': ^16.0.0
-      '@angular/core': ^16.0.0
-      '@angular/platform-browser': ^16.0.0
-      rxjs: ^6.4.0 || ^7.4.0
-    dependencies:
-      '@angular/common': 16.2.11(@angular/core@16.2.11)(rxjs@7.8.1)
-      '@angular/core': 16.2.11(rxjs@7.8.1)(zone.js@0.13.3)
-      '@angular/platform-browser': 16.2.11(@angular/animations@16.2.11)(@angular/common@16.2.11)(@angular/core@16.2.11)
-      '@ant-design/colors': 7.0.0
       rxjs: 7.8.1
       tslib: 2.6.2
     dev: false
@@ -1696,6 +1674,7 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       regenerator-runtime: 0.13.11
+    dev: true
 
   /@babel/template@7.22.15:
     resolution: {integrity: sha512-QPErUVm4uyJa60rkI73qneDacvdvzxshT3kksGqlGWYdOTIUOwJ7RDUL8sGqslY1uXWSL6xMFKEXDS3ox2uF0w==}
@@ -1742,15 +1721,52 @@ packages:
       to-fast-properties: 2.0.0
     dev: true
 
+  /@cds/city@1.1.0:
+    resolution: {integrity: sha512-S9K+Q39BGOghyLHmR0Wdcmu1i1noSUk8HcvMj+3IaohZw02WFd99aPTQDHJeseXrXZP3CNovaSlePI0R11NcFg==}
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@cds/core@6.7.0:
+    resolution: {integrity: sha512-egrsxwOJQXlhOdmrK5uEYmfpeJohdnjw7EKXBtxzyfuJCBRS3Qx+0hI+3CdvX9Ra0EZosjjNZyNCiCWnGFEX0Q==}
+    dependencies:
+      lit: 2.8.0
+      ramda: 0.29.1
+      tslib: 2.6.2
+    optionalDependencies:
+      '@cds/city': 1.1.0
+      modern-normalize: 1.1.0
+    dev: false
+
+  /@clr/angular@16.0.2(@angular/cdk@16.2.10)(@angular/common@16.2.11)(@angular/core@16.2.11)(@cds/core@6.7.0)(@clr/ui@16.0.2):
+    resolution: {integrity: sha512-D72ZhCgM+MqeEiybkqUEv7c+Hd3n75pQBiIhbuVja+Jjb1zS91LKKXpgt32AfRO51w9GxIdKT4SO8QpDtUNS+A==}
+    peerDependencies:
+      '@angular/cdk': 15 || 16
+      '@angular/common': 15 || 16
+      '@angular/core': 15 || 16
+      '@cds/core': '>= 6.7.0'
+      '@clr/ui': 16.0.2
+    dependencies:
+      '@angular/cdk': 16.2.10(@angular/common@16.2.11)(@angular/core@16.2.11)(rxjs@7.8.1)
+      '@angular/common': 16.2.11(@angular/core@16.2.11)(rxjs@7.8.1)
+      '@angular/core': 16.2.11(rxjs@7.8.1)(zone.js@0.13.3)
+      '@cds/core': 6.7.0
+      '@clr/ui': 16.0.2(@cds/core@6.7.0)
+      tslib: 2.6.2
+    dev: false
+
+  /@clr/ui@16.0.2(@cds/core@6.7.0):
+    resolution: {integrity: sha512-/WPMsAEgYaVaX5HOjeIjaogxzhs+yujHRkjcnvbVqpJfit9UaCsC6aHJCvh5Y5jqHUhUCDscyLusYRBTCp963A==}
+    peerDependencies:
+      '@cds/core': ^6.7.0
+    dependencies:
+      '@cds/core': 6.7.0
+    dev: false
+
   /@colors/colors@1.5.0:
     resolution: {integrity: sha512-ooWCrlZP11i8GImSjTHYHLkvFDP48nS4+204nGb1RiX/WXYHmJA2III9/e2DWVabCESdW7hBAEzHRqUn9OUVvQ==}
     engines: {node: '>=0.1.90'}
     dev: true
-
-  /@ctrl/tinycolor@3.6.1:
-    resolution: {integrity: sha512-SITSV6aIXsuVNV3f3O0f2n/cgyEDWoSqtZMYiAmcsYHydcKrOz3gUxB/iXd/Qf08+IZX4KpgNbvUdMBmWz+kcA==}
-    engines: {node: '>=10'}
-    dev: false
 
   /@discoveryjs/json-ext@0.5.7:
     resolution: {integrity: sha512-dBVuXR082gk3jsFp7Rd/JI4kytwGHecnCoTtXFb7DB6CNHp4rg5k1bhg0nWdLGLnOV71lmDzGQaLMy8iPLY0pw==}
@@ -2029,6 +2045,16 @@ packages:
   /@leichtgewicht/ip-codec@2.0.4:
     resolution: {integrity: sha512-Hcv+nVC0kZnQ3tD9GVu5xSMR4VVYOteQIr/hwFPVEvPdlXqgGEuRjiheChHgdM+JyqdgNcmzZOX/tnl0JOiI7A==}
     dev: true
+
+  /@lit-labs/ssr-dom-shim@1.1.2:
+    resolution: {integrity: sha512-jnOD+/+dSrfTWYfSXBXlo5l5f0q1UuJo3tkbMDCYA2lKUYq79jaxqtGEvnRoh049nt1vdo1+45RinipU6FGY2g==}
+    dev: false
+
+  /@lit/reactive-element@1.6.3:
+    resolution: {integrity: sha512-QuTgnG52Poic7uM1AN5yJ09QMe0O28e10XzSvWDz02TJiiKee4stsiownEIadWm8nYzyDAyT+gKzUoZmiWQtsQ==}
+    dependencies:
+      '@lit-labs/ssr-dom-shim': 1.1.2
+    dev: false
 
   /@ngtools/webpack@16.2.8(@angular/compiler-cli@16.2.11)(typescript@5.1.6)(webpack@5.88.2):
     resolution: {integrity: sha512-GeblhLBwXe3qPYa4YHxbo0xujRl1FKkfIusU1mTIhkQBRtZY4Xgz4iMnPIEMJTU3XXGMkS+SCx34lqbwwMhR5A==}
@@ -2341,6 +2367,10 @@ packages:
     dependencies:
       '@types/node': 20.8.9
     dev: true
+
+  /@types/trusted-types@2.0.5:
+    resolution: {integrity: sha512-I3pkr8j/6tmQtKV/ZzHtuaqYSQvyjGRKH4go60Rr0IDLlFxuRT5V32uvB1mecM5G1EVAUyF/4r4QZ1GHgz+mxA==}
+    dev: false
 
   /@types/ws@8.5.8:
     resolution: {integrity: sha512-flUksGIQCnJd6sZ1l5dqCEG/ksaoAg/eUwiLAGTJQcfgvZJKF++Ta4bJA6A5aPSJmsr+xlseHn4KLgVlNnvPTg==}
@@ -3360,13 +3390,6 @@ packages:
       whatwg-mimetype: 2.3.0
       whatwg-url: 8.7.0
     dev: true
-
-  /date-fns@2.30.0:
-    resolution: {integrity: sha512-fnULvOpxnC5/Vg3NCiWelDsLiUc9bRwAPs/+LfTLNvetFCtCTN+yQz15C/fs4AwX1R9K5GLtLfn8QW+dWisaAw==}
-    engines: {node: '>=0.11'}
-    dependencies:
-      '@babel/runtime': 7.22.6
-    dev: false
 
   /date-format@4.0.14:
     resolution: {integrity: sha512-39BOQLs9ZjKh0/patS9nrT8wc3ioX3/eA/zgbKNopnF2wCqJEoxywwwElATYvRsXdnOxA/OQeQoFZ3rFjVajhg==}
@@ -4929,6 +4952,28 @@ packages:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
     dev: true
 
+  /lit-element@3.3.3:
+    resolution: {integrity: sha512-XbeRxmTHubXENkV4h8RIPyr8lXc+Ff28rkcQzw3G6up2xg5E8Zu1IgOWIwBLEQsu3cOVFqdYwiVi0hv0SlpqUA==}
+    dependencies:
+      '@lit-labs/ssr-dom-shim': 1.1.2
+      '@lit/reactive-element': 1.6.3
+      lit-html: 2.8.0
+    dev: false
+
+  /lit-html@2.8.0:
+    resolution: {integrity: sha512-o9t+MQM3P4y7M7yNzqAyjp7z+mQGa4NS4CxiyLqFPyFWyc4O+nodLrkrxSaCTrla6M5YOLaT3RpbbqjszB5g3Q==}
+    dependencies:
+      '@types/trusted-types': 2.0.5
+    dev: false
+
+  /lit@2.8.0:
+    resolution: {integrity: sha512-4Sc3OFX9QHOJaHbmTMk28SYgVxLN3ePDjg7hofEft2zWlehFL3LiAuapWc4U/kYwMYJSh2hTCPZ6/LIC7ii0MA==}
+    dependencies:
+      '@lit/reactive-element': 1.6.3
+      lit-element: 3.3.3
+      lit-html: 2.8.0
+    dev: false
+
   /loader-runner@4.3.0:
     resolution: {integrity: sha512-3R/1M+yS3j5ou80Me59j7F9IMs4PXs3VqRrm0TU3AbKPxlmpoY1TNscJV/oGJXo8qCatFGTfDbY6W6ipGOYXfg==}
     engines: {node: '>=6.11.5'}
@@ -5243,6 +5288,13 @@ packages:
     hasBin: true
     dev: true
 
+  /modern-normalize@1.1.0:
+    resolution: {integrity: sha512-2lMlY1Yc1+CUy0gw4H95uNN7vjbpoED7NNRSBHE25nWfLBdmMzFCsPshlzbxHz+gYMcBEUN8V4pU16prcdPSgA==}
+    engines: {node: '>=6'}
+    requiresBuild: true
+    dev: false
+    optional: true
+
   /mrmime@1.0.1:
     resolution: {integrity: sha512-hzzEagAgDyoU1Q6yg5uI+AorQgdvMCur3FcKf7NhMKWsaYg+RnbTyHRa/9IlLF9rf455MOCtcqqrQQ83pPP7Uw==}
     engines: {node: '>=10'}
@@ -5320,30 +5372,6 @@ packages:
       '@angular/common': 16.2.11(@angular/core@16.2.11)(rxjs@7.8.1)
       '@angular/core': 16.2.11(rxjs@7.8.1)(zone.js@0.13.3)
       tslib: 2.6.2
-    dev: false
-
-  /ng-zorro-antd@16.2.2(@angular/animations@16.2.11)(@angular/common@16.2.11)(@angular/core@16.2.11)(@angular/forms@16.2.11)(@angular/platform-browser@16.2.11)(@angular/router@16.2.11)(rxjs@7.8.1):
-    resolution: {integrity: sha512-Y7ALO+iRjqBfVW9hqnlU4jJUovM5r6wNzXuwTxKIo/5c35/PJFwk++73iwhas6pCb3+kFucwL5XTUWUoLce3wQ==}
-    peerDependencies:
-      '@angular/animations': ^16.0.0
-      '@angular/common': ^16.0.0
-      '@angular/core': ^16.0.0
-      '@angular/forms': ^16.0.0
-      '@angular/platform-browser': ^16.0.0
-      '@angular/router': ^16.0.0
-    dependencies:
-      '@angular/animations': 16.2.11(@angular/core@16.2.11)
-      '@angular/cdk': 16.2.10(@angular/common@16.2.11)(@angular/core@16.2.11)(rxjs@7.8.1)
-      '@angular/common': 16.2.11(@angular/core@16.2.11)(rxjs@7.8.1)
-      '@angular/core': 16.2.11(rxjs@7.8.1)(zone.js@0.13.3)
-      '@angular/forms': 16.2.11(@angular/common@16.2.11)(@angular/core@16.2.11)(@angular/platform-browser@16.2.11)(rxjs@7.8.1)
-      '@angular/platform-browser': 16.2.11(@angular/animations@16.2.11)(@angular/common@16.2.11)(@angular/core@16.2.11)
-      '@angular/router': 16.2.11(@angular/common@16.2.11)(@angular/core@16.2.11)(@angular/platform-browser@16.2.11)(rxjs@7.8.1)
-      '@ant-design/icons-angular': 16.0.0(@angular/common@16.2.11)(@angular/core@16.2.11)(@angular/platform-browser@16.2.11)(rxjs@7.8.1)
-      date-fns: 2.30.0
-      tslib: 2.6.2
-    transitivePeerDependencies:
-      - rxjs
     dev: false
 
   /ngx-owl-carousel-o@16.0.0(@angular/common@16.2.11)(@angular/core@16.2.11)(rxjs@7.8.1):
@@ -6032,6 +6060,10 @@ packages:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
     dev: true
 
+  /ramda@0.29.1:
+    resolution: {integrity: sha512-OfxIeWzd4xdUNxlWhgFazxsA/nl3mS4/jGZI5n00uWOoSSFRhC1b6gl6xvmzUamgmqELraWp0J/qqVlXYPDPyA==}
+    dev: false
+
   /randombytes@2.1.0:
     resolution: {integrity: sha512-vYl3iOX+4CKUWuxGi9Ukhie6fsqXqS9FE2Zaic4tNFD2N2QQaXOMFbuKK4QmDHC0JO6B1Zp41J0LpT0oR68amQ==}
     dependencies:
@@ -6132,6 +6164,7 @@ packages:
 
   /regenerator-runtime@0.13.11:
     resolution: {integrity: sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg==}
+    dev: true
 
   /regenerator-transform@0.15.2:
     resolution: {integrity: sha512-hfMp2BoF0qOk3uc5V20ALGDS2ddjQaLrdl7xrGXvAIow7qeWRM2VA2HuCHkUKk9slq3VwEwLNK3DFBqDfPGYtg==}

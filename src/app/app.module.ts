@@ -15,6 +15,9 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 import { CourseDetailsComponent } from './pages/course-details/course-details.component';
 import { NavbarComponent } from './layouts/navbar/navbar.component';
 import { CourseComponent } from './pages/course/course.component';
+import { ClarityModule } from '@clr/angular';
+import { PaginationComponent } from './features/pagination/pagination.component';
+
 
 @NgModule({
     declarations: [
@@ -29,9 +32,16 @@ import { CourseComponent } from './pages/course/course.component';
         CourseComponent,
         CourseComponent,
         CourseDetailsComponent,
-        NavbarComponent
+        NavbarComponent,
+        PaginationComponent
     ],
-    imports: [BrowserModule, BrowserAnimationsModule, CommonModule, AppRoutingModule, CarouselModule],
+    imports: [BrowserModule, BrowserAnimationsModule, 
+        CommonModule, 
+        AppRoutingModule, 
+        CarouselModule, 
+        ClarityModule,
+        
+        ],
     providers: [
         {
             provide: APP_BASE_HREF,

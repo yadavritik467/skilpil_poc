@@ -10,7 +10,7 @@ import { UtilsService } from 'src/app/services/utils.service';
 })
 export class CourseDetailsComponent implements OnInit {
   constructor(private route:ActivatedRoute ,public readonly utilsService:UtilsService) {}
-   isVisible: boolean = true;
+   isVisible: boolean = false;
    course: any;
 
  

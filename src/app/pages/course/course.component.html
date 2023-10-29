@@ -1,44 +1,111 @@
 <div class="body-course w-full text-center mt-32 mb-20 ">
-    
+
 
     <div id="course" class="course-container flex max-md:flex-wrap">
-        <div class="flex just gap-3 mt-28 px-10 max-sm:my-5 ">
-            <p class="border border-black h-20 p-4 " ><span class="font-black">Filter</span></p>
-            <p class="border border-black h-20 p-4 text-left"><span class="font-black text-sm">Sort by</span> <br> 
-            <select name="" id="">
+        <div class="flex font-semibold flex-col gap-5">
+            <div class="flex just gap-3 mt-28 px-10 max-sm:my-5 ">
+                <p class="border border-black h-20 p-4 "><span class="font-black">Filter</span></p>
+                <p class="border border-black h-20 p-4 text-left"><span class="font-black text-sm">Sort by</span> <br>
+                    <select name="" id="">
 
-                <option value="">Most Relevant</option>
-                <option value="">Most Reviewed</option>
-                <option value="">Newest</option>
-            </select> </p>
+                        <option value="">Most Relevant</option>
+                        <option value="">Most Reviewed</option>
+                        <option value="">Newest</option>
+                    </select>
+                </p>
+            </div>
+            <div class="font-semibold">
+                <p class=" h-20 pt-4 pl-4 text-left"> Ratings :
+                    <select name="" id="">
+
+                        <option value="">4.5 - 5</option>
+                        <option value="">4 - 4.5</option>
+                        <option value="">3.5 - 4</option>
+                        <option value="">3 - 3.5</option>
+                        <option value="">2.5 - 3</option>
+                        <option value="">2 - 2.5</option>
+                        <option value="">1.5 - 2</option>
+                        <option value="">1 - 1.5</option>
+                        <option value="">0.5 - 1</option>
+
+
+                    </select>
+                </p>
+            </div>
+            <div>
+                <p class=" h-20 pt-4 pl-4 text-left"> Languages :
+                    <select name="" id="">
+                        <option value="">English</option>
+                        <option value="">Hindi</option>
+                    </select>
+                </p>
+            </div>
+            <div>
+                <p class=" h-20 pt-4 pl-4 text-left"> Topics :
+                    <select name="" id="">
+                        <option value="">Web Developement</option>
+                        <option value="">Mobile Developement</option>
+                        <option value="">Personality Developement</option>
+                        <option value="">Sales Training</option>
+                        <option value="">Digital Marketing</option>
+                        <option value="">Mutual Funds</option>
+                    </select>
+                </p>
+            </div>
+            <div>
+                <p class=" h-20 pt-4 pl-4 text-left"> Level :
+                    <select name="" id="">
+                        <option value="">All Level</option>
+                        <option value="">Beginner</option>
+                        <option value="">Intermediate</option>
+                        <option value="">Expert</option>
+                        <option value="">Advanced</option>
+                    </select>
+                </p>
+            </div>
+            <div>
+                <p class=" h-20 pt-4 pl-4 text-left"> Price :
+                    <select name="" id="">
+                        <option value="">Paid</option>
+                        <option value="">Free</option>
+                        <
+                    </select>
+                </p>
+            </div>
         </div>
-        
-            <div class="flex flex-col ">
-                <div class="text-center">
-                    <h1 class="text-3xl font-bold  ">Explore Our Courses</h1>
-    <span class="text-xl">The future belongs to those who learn more skills and combine them in creative ways.</span>
-                </div>
-                <div class="  flex flex-wrap  mt-10   w-fit" >
-                    
-                    <div *ngFor="let course of courses | paginate: { itemsPerPage: 6, currentPage: p } " class="w-[320px] caro pb-2 pl-4  max-sm:w-[280px] m-4   " >
-    
-    
-                        <a routerLink="{{course.id}}" class="flex flex-col items-start  "> <img  [src]="this.utilsService.getUrl(course.image)" alt="image loading">
-                            
-            
-                            <p class="font-bold m-2">{{ course.title }}</p>
-                            <span class="m-2">{{ course.duration }}</span>
-                            <button class="custom-bg-color text-white w-36 font-bold m-2 py-2 px-4 ">
-                                Contact Now
-                            </button>
-                        </a>
-            
-                    </div>
-                </div>
-                <div class="w-full flex justify-end pr-20 pt-10">
-                    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+
+        <div class="flex flex-col ">
+            <div class="text-center">
+                <h1 class="text-3xl font-bold  ">Explore Our Courses</h1>
+                <span class="text-xl">The future belongs to those who learn more skills and combine them in creative
+                    ways.</span>
+            </div>
+            <div class="  flex flex-wrap  mt-10   w-fit">
+
+                <div *ngFor="let course of displayedCourses  "
+                    class="w-[320px] caro pb-2 pl-4  max-sm:w-[280px] m-4   ">
+
+
+                    <a routerLink="{{course.id}}" class="flex flex-col items-start  "> <img
+                            [src]="this.utilsService.getUrl(course.image)" alt="image loading">
+
+
+                        <p class="font-bold m-2">{{ course.title }}</p>
+                        <span class="m-2">{{ course.duration }}</span>
+                        <button class="custom-bg-color text-white w-36 font-bold m-2 py-2 px-4 ">
+                            Contact Now
+                        </button>
+                    </a>
+
                 </div>
             </div>
-        
+            <div class="w-full flex gap-10 font-semibold justify-end pr-20 pt-10">
+                <button (click)="previousPage()">Previous</button>
+                <p> {{ currentPage }}</p>
+                <button (click)="nextPage()">Next</button>
+
+            </div>
+        </div>
+
     </div>
 </div>

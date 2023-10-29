@@ -15,7 +15,9 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 import { CourseDetailsComponent } from './pages/course-details/course-details.component';
 import { NavbarComponent } from './layouts/navbar/navbar.component';
 import { CourseComponent } from './pages/course/course.component';
-import { NgxPaginationModule } from 'ngx-pagination';
+import { ClarityModule } from '@clr/angular';
+import { PaginationComponent } from './features/pagination/pagination.component';
+
 
 @NgModule({
     declarations: [
@@ -30,13 +32,16 @@ import { NgxPaginationModule } from 'ngx-pagination';
         CourseComponent,
         CourseComponent,
         CourseDetailsComponent,
-        NavbarComponent
+        NavbarComponent,
+        PaginationComponent
     ],
     imports: [BrowserModule, BrowserAnimationsModule, 
         CommonModule, 
         AppRoutingModule, 
         CarouselModule, 
-        NgxPaginationModule],
+        ClarityModule,
+        
+        ],
     providers: [
         {
             provide: APP_BASE_HREF,

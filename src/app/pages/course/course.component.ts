@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { coursesSchema } from 'src/app/schema/course.schema';
+import { UtilsService } from 'src/app/services/utils.service';
 
 @Component({
   selector: 'app-course',
@@ -8,6 +9,9 @@ import { coursesSchema } from 'src/app/schema/course.schema';
 })
 export class CourseComponent {
 
+  constructor(public readonly utilsService:UtilsService) {}
+
   courses : any[]=coursesSchema;
+  p:number = 1;
 
 }

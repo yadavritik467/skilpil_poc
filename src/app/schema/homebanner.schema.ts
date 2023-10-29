@@ -1,21 +1,38 @@
 export const mainBannerSchema = [
     {
         id:1,
-        bannerUrl:"assets/images/homeBanner/1.webp",
+        bannerUrl:"assets/images/homeBanner/1.jpg",
         quote:"Bringing Industry closer to  Institutions.",
-        title:"Mastering the skill,with India's best Industry Experts."
+        title:"Mastering the skill,with India's best Industry Experts.",
+        isShowTitle: true
     },
     {
         id:2,
         bannerUrl:"assets/images/homeBanner/2.jpg",
         quote:"Life is a journey that must be traveled no matter how bad the roads and accommodations.",
-        title:"Embrace the glorious mess that you are."
+        title:"Embrace the glorious mess that you are.",
+        isShowTitle: true
     },
     {
         id:3,
         bannerUrl:"assets/images/homeBanner/3.jpg",
         quote:"Your time is limited, don't waste it living someone else's life.",
-        title:"The best way to predict the future is to invent it."
+        title:"The best way to predict the future is to invent it.",
+        isShowTitle: true
+    },
+    {
+        id:4,
+        bannerUrl:"assets/images/homeBanner/4.jpg",
+        quote:"Your time is limited, don't waste it living someone else's life.",
+        title:"The best way to predict the future is to invent it.",
+        isShowTitle: true
+    },
+    {
+        id:5,
+        bannerUrl:"assets/images/homeBanner/5.jpg",
+        quote:"Your time is limited, don't waste it living someone else's life.",
+        title:"The best way to predict the future is to invent it.",
+        isShowTitle: true
     },
 ]
 

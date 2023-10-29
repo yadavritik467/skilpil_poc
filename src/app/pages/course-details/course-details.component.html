@@ -1,15 +1,51 @@
-<div id="course" class="course-container flex flex-wrap  py-20  justify-between">
-    <div  class="flex flex-wrap justify-around gap-20 mt-20 mx-auto  ">
-      <div class="px-10">
-        <img class="rounded-2xl w-[500px]" [src]="course.image" alt="">
+<div class="flex  w-full h-[100vh] justify-between px-10 pt-28">
+  <div class="info  w-[600px] ">
+    <div>
+      <div class="pt-10 text-[#421e42]">
+        <p class="font-extrabold  text-3xl m-2">{{ course.title }}</p>
+        <p class="m-2">{{ course.duration }}</p>
       </div>
-      <div class=" flex flex-col items-center justify-center  ">
-       
-        <p class="font-bold m-2">{{ course.title }}</p>
-        <span class="m-2">{{ course.duration }}</span>
-        <button class="custom-bg-color text-white w-36 font-bold m-2 py-2 px-4 ">
-            Contact Now
-        </button>
-      </div>
+      <p class="pt-20 text-justify font-semibold">{{ course.description }}</p>
     </div>
+
+  </div>
+  <div class="rightinfo  ">
+    <img class="rounded-2xl w-[650px] h-[400px] " [src]="this.utilsService.getUrl(course.image)" alt="">
+    <div class="w-full text-center pt-10">
+      <button (click)="openModal()"  class="custom-bg-color text-white w-48 font-bold m-2 py-2 px-4 ">
+        Contact Now  
+      </button>
+    </div>
+  </div>
+
+  <!-- for modal -->
+
+  <div  *ngIf="isVisible" class="modal flex justify-center items-center fixed top-0 left-0 right-0 bottom-0 bg-[#000000c4]   w-full h-[100vh]">
+    <form class="flex relative border flex-col w-[650px] h-fit bg-white z-50 opacity-100 gap-8 p-10" action="">
+      <div (click)="closeModal()" class="absolute cursor-pointer right-4 top-4"><i class=" text-red-600 text-2xl font-extrabold fa-solid fa-xmark"></i></div>
+      <div class=" text-left text-[#421e42]" >
+        <h1 class="text-xl  "> Contact us for - <span class="font-extrabold ">{{course.title}}</span> </h1>
+        
+      </div>
+      <div class="flex justify-between gap-4">
+        <input class="border border-slate-950 p-2 w-full font-semibold text-justify rounded" type="text" placeholder="Enter your first name" >
+      <input class="border border-slate-950 p-2 w-full font-semibold text-justify rounded" type="email" placeholder="Enter your last name" >
+      </div>
+      <div class="flex justify-between gap-4">
+        <input class="border border-slate-950 p-2 w-full font-semibold text-justify rounded" type="number" placeholder="Enter your email">
+        <input class="border border-slate-950 p-2 w-full font-semibold text-justify rounded" type="text" placeholder="Enter you contact number" >
+      </div>
+     <textarea class="border border-slate-950 p-2" name="" id="" cols="30" rows="10" placeholder="Enter your query here" ></textarea>
+      <div class=" flex justify-end">
+        <button class="bg-red-500  text-white w-36 font-bold m-2 py-2 px-4" (click)="closeModal()">
+          Cancel
+      </button>
+          <button class="bg-[#8d3462] text-white w-36 font-bold m-2 py-2 px-4" (click)="submitForm()">
+              Submit
+          </button>
+          
+      </div>
+    </form>
+  </div>
+
 </div>
